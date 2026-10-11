@@ -5,7 +5,7 @@
 ## 在线作品集
 
 - GitHub Pages：<https://13720970117.github.io/ai-customer-service-pm-portfolio/>
-- 竞品分析 Agent Demo：<https://competitor-radar-agent.muddycreek16.chatgpt.site/>
+- 竞品分析 Agent 源码：<https://github.com/13720970117/competitor-radar-agent>
 
 ## 内容结构
 
@@ -15,7 +15,7 @@
 - MVP PRD 与 AI 能力需求
 - 30 条 Eval Set、LLM-as-Judge 与优化复盘
 - 数据闭环与安全护栏
-- 可运行的竞品分析 Agent Demo
+- 竞品分析 Agent 代码项目与运行说明
 - 10 份原始交付物下载
 
 ## 本地预览
@@ -27,4 +27,3 @@ python3 -m http.server 4173 --directory dist
 浏览器访问 <http://127.0.0.1:4173/>。
 
 网站为静态页面，GitHub Pages 工作流会自动发布 `dist/` 目录。
-
