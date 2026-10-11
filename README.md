@@ -5,6 +5,7 @@
 ## 在线作品集
 
 - GitHub Pages：<https://13720970117.github.io/ai-customer-service-pm-portfolio/>
+- 竞品分析 Agent Demo：<https://competitor-radar-agent.netlify.app/>
 - 竞品分析 Agent 源码：<https://github.com/13720970117/competitor-radar-agent>
 
 ## 内容结构
