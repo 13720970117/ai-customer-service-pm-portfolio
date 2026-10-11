@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AI 智能客服 MVP 产品作品集，涵盖用户研究、竞品分析、PRD、AI 能力设计、Evals、数据闭环与 Vibe Coding Demo。"
+    />
+    <meta name="theme-color" content="#112821" />
+    <title>AI 智能客服 MVP｜产品作品集</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark">AI</span>
+        <span>
+          <strong>AI PM Case Study</strong>
+          <small>智能客服 MVP</small>
+        </span>
+      </a>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+        <span class="sr-only">打开导航</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="页面导航">
+        <a href="#overview">项目概览</a>
+        <a href="#discovery">研究与定义</a>
+        <a href="#solution">产品方案</a>
+        <a href="#evals">Evals</a>
+        <a href="#deliverables">全部交付物</a>
+        <a class="nav-cta" href="https://competitor-radar-agent.muddycreek16.chatgpt.site/" target="_blank" rel="noreferrer">体验 Demo</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI 产品经理完整项目</p>
+          <h1>把“能回答”做成<br /><em>可解释、可接管、可闭环</em>的 AI 客服</h1>
+          <p class="hero-lead">
+            从用户研究、竞品与需求优先级出发，完成产品架构、MVP PRD、AI 能力协议、质量评估、Guardrails、数据闭环与商业化设计，并用 Vibe Coding 做出可直接体验的产品 Demo。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#overview">查看完整案例</a>
+            <a class="button button-ghost" href="https://competitor-radar-agent.muddycreek16.chatgpt.site/" target="_blank" rel="noreferrer">
+              打开 Vibe Coding Demo <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <ul class="hero-tags" aria-label="项目关键词">
+            <li>RAG</li><li>Agent 工作流</li><li>LLM-as-Judge</li><li>Guardrails</li><li>数据闭环</li>
+          </ul>
+        </div>
+
+        <div class="hero-panel reveal" aria-label="项目关键数字">
+          <div class="hero-panel-top">
+            <span>CASE / 01</span>
+            <span>AI CUSTOMER SERVICE</span>
+          </div>
+          <div class="metric-grid">
+            <article><strong>3</strong><span>核心用户画像</span></article>
+            <article><strong>12</strong><span>MVP P0 需求</span></article>
+            <article><strong>8</strong><span>AI 能力模块</span></article>
+            <article><strong>30</strong><span>回归评估用例</span></article>
+          </div>
+          <div class="hero-panel-note">
+            <span class="pulse"></span>
+            <p><strong>核心产品判断</strong>：证据不足时不猜测，用户需要时无障碍转人工，所有失败都要进入可复现的改进闭环。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="section section-shell">
+        <header class="section-heading reveal">
+          <p class="section-index">01 / 项目概览</p>
+          <h2>一条从问题到验证的完整产品链路</h2>
+          <p>作品不是文档集合，而是一组相互约束的产品决策：研究决定范围，范围决定架构，架构决定 AI 能力和安全边界，Evals 决定能否上线，数据闭环决定产品能否持续变好。</p>
+        </header>
+
+        <div class="story-grid">
+          <article class="story-card story-card-dark reveal">
+            <span class="card-kicker">问题</span>
+            <h3>传统机器人“答了”，企业仍不知道是否可靠</h3>
+            <p>高峰排队、知识频繁更新、跨系统查询和复杂售后同时发生。没有来源的答案、低置信度硬答和断裂的人工交接，会把效率问题变成信任问题。</p>
+          </article>
+          <article class="story-card reveal">
+            <span class="card-kicker">产品定位</span>
+            <h3>可信问答 + 人工接管 + 运营闭环</h3>
+            <p>AI 仅依据当前租户的有效知识和授权只读数据回答；证据不足、冲突或越权时拒答或转人工；人工修正与失败会话进入 Bad Case 队列。</p>
+          </article>
+          <article class="story-card reveal">
+            <span class="card-kicker">MVP 边界</span>
+            <h3>先把高频链路做深，不追求大而全</h3>
+            <p>首版覆盖 Web/H5、知识问答、订单物流只读查询、转人工、工单与运营看板；不做电话、复杂 BI，也不开放退款、改地址等高风险写操作。</p>
+          </article>
+        </div>
+
+        <div class="decision-strip reveal" aria-label="项目方法路径">
+          <span>用户洞察</span><i></i><span>范围定义</span><i></i><span>AI 能力</span><i></i><span>Evals</span><i></i><span>灰度与回流</span>
+        </div>
+      </section>
+
+      <section id="discovery" class="section section-tint">
+        <div class="section-shell">
+          <header class="section-heading reveal">
+            <p class="section-index">02 / 研究与定义</p>
+            <h2>先找到真实任务，再决定 AI 应该做什么</h2>
+            <p>研究聚焦购买决策者、日常使用者与业务负责人，避免只从“模型能做什么”倒推功能。</p>
+          </header>
+
+          <div class="persona-grid">
+            <article class="persona-card reveal">
+              <div class="persona-id">A</div>
+              <div><span>客服主管</span><h3>赵敏，34 岁</h3></div>
+              <p>需要在大促高峰稳定分担咨询，并能向管理层证明 AI 的质量、人效和成本价值。</p>
+              <strong>关键任务：看见质量、及时介入、持续复盘</strong>
+            </article>
+            <article class="persona-card reveal">
+              <div class="persona-id">B</div>
+              <div><span>客服专员</span><h3>刘芳，27 岁</h3></div>
+              <p>日均处理 120—150 个会话，希望接管复杂问题时不用重新问一遍，也不用频繁切换系统。</p>
+              <strong>关键任务：快速接管、完整上下文、顺畅闭环</strong>
+            </article>
+            <article class="persona-card reveal">
+              <div class="persona-id">C</div>
+              <div><span>店铺老板</span><h3>陈宇，38 岁</h3></div>
+              <p>关注上线成本、问题解决率和续费回报，希望用有限团队覆盖夜间与促销高峰。</p>
+              <strong>关键任务：低门槛上线、可量化 ROI、风险可控</strong>
+            </article>
+          </div>
+
+          <div class="research-evidence reveal">
+            <div class="evidence-copy">
+              <p class="mini-label">需求收敛</p>
+              <h3>25 条需求经过 ICE 排序，首版锁定 12 条 P0</h3>
+              <p>最高优先级不是“更聪明地回答”，而是用户一句话转人工、自动携带会话摘要、批量导入知识、答案展示来源，以及客服可自主选择接入指定会话。</p>
+              <a class="text-link" href="./files/user-research-and-priorities.docx" download>下载用户研究与需求清单 <span>↓</span></a>
+            </div>
+            <div class="priority-list" aria-label="优先级示意">
+              <div><b>01</b><span>一句话一键转人工</span><em>ICE 900</em></div>
+              <div><b>02</b><span>自动摘要并携带历史上下文</span><em>ICE 720</em></div>
+              <div><b>03</b><span>批量知识导入与状态反馈</span><em>P0</em></div>
+              <div><b>04</b><span>答案来源与更新时间</span><em>P0</em></div>
+            </div>
+          </div>
+
+          <div class="competitor-block reveal">
+            <div class="competitor-head">
+              <div><p class="mini-label">竞品研究</p><h3>5 家产品 × 19 项能力矩阵</h3></div>
+              <a class="text-link" href="./files/competitor-analysis.docx" download>下载竞品分析报告 <span>↓</span></a>
+            </div>
+            <div class="competitor-row" aria-label="竞品范围">
+              <span>Udesk</span><span>智齿科技</span><span>网易七鱼</span><span>美洽</span><span>腾讯云 TCCC</span>
+            </div>
+            <div class="opportunity-grid">
+              <div><b>共同能力</b><p>全渠道、人工坐席、机器人、工单和数据看板已经成为标准配置。</p></div>
+              <div><b>未被充分解决</b><p>回答为什么可信、何时必须转人工、如何把 Bad Case 变成下一版评估样本。</p></div>
+              <div><b>差异化切入</b><p>不比“回答数量”，优先做来源可追溯、接管顺畅和质量闭环。</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="solution" class="section section-shell">
+        <header class="section-heading reveal">
+          <p class="section-index">03 / 产品方案</p>
+          <h2>用六层架构把模型能力装进可控业务流程</h2>
+          <p>产品端、AI 引擎、业务集成和安全底座共同决定体验。模型只负责理解、检索、生成、判断与摘要，权限和真实业务动作留在确定性系统中。</p>
+        </header>
+
+        <div class="architecture reveal" role="img" aria-label="AI智能客服六层产品架构示意">
+          <div class="architecture-core">
+            <span>产品核心</span>
+            <strong>AI 智能客服 MVP</strong>
+            <small>可解释 · 可接管 · 可闭环</small>
+          </div>
+          <div class="architecture-layer layer-customer">
+            <b>用户端</b><span>Web/H5 问答</span><span>来源展示</span><span>转人工</span><span>工单进度</span>
+          </div>
+          <div class="architecture-layer layer-agent">
+            <b>客服工作台</b><span>待接队列</span><span>AI 摘要</span><span>订单物流</span><span>工单处理</span>
+          </div>
+          <div class="architecture-layer layer-ops">
+            <b>管理后台</b><span>知识库</span><span>会话监控</span><span>Bad Case</span><span>效果看板</span>
+          </div>
+          <div class="architecture-layer layer-ai">
+            <b>AI 引擎</b><span>NLP</span><span>RAG</span><span>生成</span><span>风险判断</span><span>摘要</span>
+          </div>
+          <div class="architecture-layer layer-integration">
+            <b>业务集成</b><span>渠道 API</span><span>订单物流</span><span>工单系统</span>
+          </div>
+          <div class="architecture-layer layer-security">
+            <b>安全底座</b><span>RBAC</span><span>租户隔离</span><span>字段遮蔽</span><span>审计日志</span>
+          </div>
+        </div>
+
+        <div class="external-links reveal">
+          <span>查看可编辑架构原图</span>
+          <a href="https://www.figma.com/board/VIL0tz64G3cQeYmprZjDkt/AI%E6%99%BA%E8%83%BD%E5%AE%A2%E6%9C%8DMVP%EF%BD%9C%E4%BA%A7%E5%93%81%E5%8A%9F%E8%83%BD%E6%9E%B6%E6%9E%84%E5%9B%BE?node-id=0-1&t=m5jFKJ8ZwyQPf77i-1" target="_blank" rel="noreferrer">产品功能架构 ↗</a>
+          <a href="https://www.figma.com/board/hZbNO0tSCd1LeccbCMy5WT/AI%E6%99%BA%E8%83%BD%E5%AE%A2%E6%9C%8DMVP%EF%BD%9C%E4%BF%A1%E6%81%AF%E6%9E%B6%E6%9E%84%E5%9B%BE%EF%BC%88%E4%BF%AE%E6%AD%A3%E7%89%88%EF%BC%89?node-id=0-1&t=Q7GZS72jDVCvrifW-1" target="_blank" rel="noreferrer">信息架构 ↗</a>
+          <a href="https://www.figma.com/board/KqDC7W5GRmjJiTgLZdtHmq/AI%E6%99%BA%E8%83%BD%E5%AE%A2%E6%9C%8DMVP%EF%BD%9C%E6%A0%B8%E5%BF%83%E7%94%A8%E6%88%B7%E6%B5%81%E7%A8%8B%E5%9B%BE?node-id=0-1&t=av0EpQEsaJnxCPal-1" target="_blank" rel="noreferrer">核心流程图 ↗</a>
+        </div>
+
+        <div class="solution-grid">
+          <article class="solution-card reveal">
+            <p class="mini-label">MVP PRD</p>
+            <h3>6 个功能域，覆盖 12 条 P0</h3>
+            <ol>
+              <li>企业初始化与渠道接入</li><li>知识导入与版本管理</li><li>可信 AI 问答与来源展示</li>
+              <li>转人工、摘要与待接队列</li><li>订单物流与工单闭环</li><li>运营、Bad Case 与看板</li>
+            </ol>
+            <a class="text-link" href="./files/mvp-prd.docx" download>下载完整 PRD <span>↓</span></a>
+          </article>
+          <article class="solution-card solution-card-accent reveal">
+            <p class="mini-label">产品红线</p>
+            <h3>“不会做”也是产品能力</h3>
+            <ul class="check-list">
+              <li>无有效证据，不生成事实性答案</li>
+              <li>显式转人工请求优先于继续问答</li>
+              <li>首版工具全部只读</li>
+              <li>跨租户、注入和敏感信息必须阻断</li>
+              <li>退款、取消、改地址等写操作交给人工</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="capabilities reveal">
+          <div class="capabilities-head">
+            <div><p class="mini-label">AI 能力需求</p><h3>8 项能力都有输入、输出、指标和降级路径</h3></div>
+            <a class="text-link" href="./files/ai-capability-requirements.docx" download>下载 AI 能力需求文档 <span>↓</span></a>
+          </div>
+          <div class="capability-list">
+            <span><b>A01</b>知识解析</span><span><b>A02</b>问题理解</span><span><b>A03</b>检索重排</span><span><b>A04</b>证据生成</span>
+            <span><b>A05</b>风险判断</span><span><b>A06</b>工具编排</span><span><b>A07</b>会话摘要</span><span><b>A08</b>Bad Case 回流</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="evals" class="section section-dark">
+        <div class="section-shell">
+          <header class="section-heading reveal">
+            <p class="section-index">04 / Evals 与安全</p>
+            <h2>把“感觉变好”变成可复现的质量证据</h2>
+            <p>围绕基础、复杂、边界、攻击和兜底五类场景构建 30 条 Eval Set，使用固定四维 Rubric 做基线、诊断、优化与同集回归。</p>
+          </header>
+
+          <div class="eval-scoreboard reveal">
+            <div class="score-card"><span>V0 总均分</span><strong>3.33<small>/5</small></strong><em>通过率 17%</em></div>
+            <div class="score-arrow" aria-hidden="true">→</div>
+            <div class="score-card score-card-highlight"><span>V1 总均分</span><strong>4.62<small>/5</small></strong><em>通过率 93%</em></div>
+            <div class="score-card"><span>严重安全失败</span><strong>5 → 0</strong><em>同一评估集回归</em></div>
+          </div>
+
+          <div class="eval-layout">
+            <div class="eval-bars reveal">
+              <h3>五类用例通过率</h3>
+              <div class="bar-row"><span>基础</span><div style="--v0:17%;--v1:100%"><i></i></div><em>17% → 100%</em></div>
+              <div class="bar-row"><span>复杂</span><div style="--v0:0%;--v1:67%"><i></i></div><em>0% → 67%</em></div>
+              <div class="bar-row"><span>边界</span><div style="--v0:17%;--v1:100%"><i></i></div><em>17% → 100%</em></div>
+              <div class="bar-row"><span>攻击</span><div style="--v0:0%;--v1:100%"><i></i></div><em>0% → 100%</em></div>
+              <div class="bar-row"><span>兜底</span><div style="--v0:50%;--v1:100%"><i></i></div><em>50% → 100%</em></div>
+              <div class="bar-legend"><span><i></i>V0</span><span><i></i>V1</span></div>
+            </div>
+
+            <div class="eval-insight reveal">
+              <p class="mini-label">最重要的复盘</p>
+              <h3>Prompt 优化不能替代产品能力</h3>
+              <p>复杂场景仍受真实多订单和子包裹工具缺失影响。模型可以给出正确流程，却无法完成数据核验。下一步必须接入只读沙箱、建立盲测集，并同时评估延迟、成本和人工接管成功率。</p>
+              <div class="eval-links">
+                <a href="./files/eval-set-and-report.xlsx" download>下载 Eval Set 与报告 ↓</a>
+                <a href="./files/evals-retrospective.docx" download>下载 Evals 实战记录 ↓</a>
+                <a href="./files/llm-as-judge.md" download>下载 Judge Prompt ↓</a>
+              </div>
+            </div>
+          </div>
+
+          <p class="evidence-note reveal"><strong>数据边界：</strong>以上结果来自固定模拟沙箱和同集回归，用于展示评估方法，不代表真实线上效果。V1 规则来自这 30 条失败样本，存在测试集过拟合风险。</p>
+
+          <div class="guardrail-grid reveal">
+            <article><span>输入护栏</span><p>身份与租户校验、长度与频率、PII 识别、内容安全和 Prompt 注入检测。</p></article>
+            <article><span>执行护栏</span><p>可信知识准入、工具白名单、参数 Schema、最小权限、超时和幂等。</p></article>
+            <article><span>输出护栏</span><p>事实与证据对齐、敏感信息遮蔽、拒答与转人工、决策和版本可追溯。</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="flywheel" class="section section-shell">
+        <header class="section-heading reveal">
+          <p class="section-index">05 / 数据闭环</p>
+          <h2>让每一个失败案例都有发现、修正和验证记录</h2>
+          <p>看板只告诉团队发生了什么；数据闭环还要回答为什么、该改什么，以及改完是否真的有效。</p>
+        </header>
+
+        <div class="flywheel reveal" aria-label="数据闭环六步流程">
+          <div><b>01</b><strong>采集轨迹</strong><span>输入、输出、证据、工具与结果</span></div>
+          <i>→</i><div><b>02</b><strong>触发 Bad Case</strong><span>规则、反馈、人工与抽样</span></div>
+          <i>→</i><div><b>03</b><strong>治理与标注</strong><span>隔离、脱敏、去重、人工复核</span></div>
+          <i>→</i><div><b>04</b><strong>根因分流</strong><span>Prompt、知识、工具、交互或模型</span></div>
+          <i>→</i><div><b>05</b><strong>离线与灰度</strong><span>回归集、盲测集、A/B 与护栏</span></div>
+          <i>→</i><div><b>06</b><strong>沉淀复用</strong><span>关闭案例并加入永久回归集</span></div>
+        </div>
+
+        <div class="flywheel-bottom reveal">
+          <div>
+            <p class="mini-label">产品原则</p>
+            <h3>根因不属于模型时，不用微调掩盖</h3>
+            <p>知识过期修知识，订单状态错误修工具，转人工入口不可见修交互，跨租户访问修权限。只有理解、生成或泛化问题才进入模型优化。</p>
+          </div>
+          <a class="button button-dark" href="./files/data-flywheel.docx" download>下载数据闭环方案</a>
+        </div>
+      </section>
+
+      <section id="demo" class="section section-demo">
+        <div class="section-shell demo-layout">
+          <div class="demo-copy reveal">
+            <p class="section-index">06 / Vibe Coding</p>
+            <h2>把产品假设做成任何人都能打开的 Demo</h2>
+            <p>为了验证“少量竞品资料能否帮助产品经理快速发现研究缺口，并形成下一步行动”，独立完成了竞品分析 Agent：输入三个竞品，即可生成七维矩阵、共同缺口、机会点、差异化建议和待核验清单。</p>
+            <ul class="demo-facts">
+              <li><b>工作流</b><span>输入校验 → Prompt 编排 → 豆包 API → JSON 校验 → 报告渲染</span></li>
+              <li><b>技术栈</b><span>React、TypeScript、Cloudflare Workers、火山方舟 API</span></li>
+              <li><b>真实性规则</b><span>资料不足标记“待核验”，不把推断包装成事实</span></li>
+            </ul>
+            <div class="demo-actions">
+              <a class="button button-primary" href="https://competitor-radar-agent.muddycreek16.chatgpt.site/" target="_blank" rel="noreferrer">立即体验 Demo ↗</a>
+              <a class="text-link" href="./files/vibe-coding-notes.docx" download>下载 Vibe Coding 笔记 <span>↓</span></a>
+            </div>
+          </div>
+          <a class="demo-browser reveal" href="https://competitor-radar-agent.muddycreek16.chatgpt.site/" target="_blank" rel="noreferrer" aria-label="打开竞品雷达 Demo">
+            <div class="browser-bar"><span></span><span></span><span></span><p>competitor-radar-agent.muddycreek16.chatgpt.site</p></div>
+            <img src="./assets/competitor-radar-demo.jpg" alt="竞品雷达 Agent Demo 首页截图" />
+            <div class="browser-hover">打开可交互产品 <span>↗</span></div>
+          </a>
+        </div>
+      </section>
+
+      <section id="deliverables" class="section section-shell">
+        <header class="section-heading reveal">
+          <p class="section-index">07 / 全部交付物</p>
+          <h2>10 份可下载、可追溯的项目证据</h2>
+          <p>网页负责讲清产品逻辑，原始文件保留完整需求、表格、Prompt、评估用例和设计细节，便于面试时深入展开。</p>
+        </header>
+
+        <div class="filter-bar reveal" role="group" aria-label="筛选交付物">
+          <button class="active" data-filter="all">全部</button>
+          <button data-filter="research">研究</button>
+          <button data-filter="product">产品设计</button>
+          <button data-filter="quality">质量与安全</button>
+          <button data-filter="build">Vibe Coding</button>
+        </div>
+
+        <div class="deliverable-grid">
+          <article class="deliverable-card reveal" data-category="research">
+            <span>01 / Research</span><h3>用户研究与需求清单</h3><p>3 个画像、用户旅程、25 条需求 ICE 排序、12 条 P0 与 MVP 指标。</p>
+            <a href="./files/user-research-and-priorities.docx" download>DOCX 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="research">
+            <span>02 / Research</span><h3>竞品分析报告</h3><p>5 家代表产品、19 项功能矩阵、AI 局限、商业模式与差异化机会。</p>
+            <a href="./files/competitor-analysis.docx" download>DOCX 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="product">
+            <span>03 / Architecture</span><h3>产品架构设计</h3><p>产品功能架构、信息架构、核心用户流程和首版边界。</p>
+            <a href="./files/product-architecture.md" download>Markdown 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="product">
+            <span>04 / PRD</span><h3>MVP 产品需求文档</h3><p>正常流、异常流、验收、埋点、Guardrails、数据闭环与商业化补充。</p>
+            <a href="./files/mvp-prd.docx" download>DOCX 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="product">
+            <span>05 / AI Spec</span><h3>AI 能力需求文档</h3><p>8 项能力的输入输出协议、数据要求、评估指标、安全和可观测要求。</p>
+            <a href="./files/ai-capability-requirements.docx" download>DOCX 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="quality">
+            <span>06 / Eval Set</span><h3>Eval Set 与评估报告</h3><p>30 条用例、V0/V1 输出、四维评分、分类对比和失败诊断。</p>
+            <a href="./files/eval-set-and-report.xlsx" download>XLSX 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="quality">
+            <span>07 / Retrospective</span><h3>Evals 实战记录</h3><p>完整记录评估对象、沙箱、基线、失败案例、优化规则与局限。</p>
+            <a href="./files/evals-retrospective.docx" download>DOCX 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="quality">
+            <span>08 / Judge</span><h3>LLM-as-Judge 评分器</h3><p>准确性、完整性、友好度、安全性四维 Rubric 与 JSON 输出约束。</p>
+            <a href="./files/llm-as-judge.md" download>Markdown 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="quality">
+            <span>09 / Flywheel</span><h3>数据闭环设计方案</h3><p>采集、筛选、标注、根因分流、验证、灰度和责任机制。</p>
+            <a href="./files/data-flywheel.docx" download>DOCX 下载 ↓</a>
+          </article>
+          <article class="deliverable-card reveal" data-category="build">
+            <span>10 / Build</span><h3>Vibe Coding 学习笔记</h3><p>从验证假设、MVP 收缩到 API 调用和真实操作验收的方法记录。</p>
+            <a href="./files/vibe-coding-notes.docx" download>DOCX 下载 ↓</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="closing section-shell reveal">
+        <p class="section-index">END / NEXT STEP</p>
+        <h2>查看方法，也可以直接体验结果</h2>
+        <p>完整材料保留了从判断、取舍到验证的过程；可交互 Demo 用于展示把产品假设快速做成可用原型的能力。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://competitor-radar-agent.muddycreek16.chatgpt.site/" target="_blank" rel="noreferrer">体验竞品分析 Agent ↗</a>
+          <button class="button button-ghost" id="copy-link" type="button">复制作品集链接</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>AI 智能客服 MVP 产品作品集</span>
+      <span>Research · Product · Evals · Build</span>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">链接已复制</div>
+    <script src="./app.js"></script>
+  </body>
+</html>
