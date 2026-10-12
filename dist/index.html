@@ -7,8 +7,26 @@
     <title>AI 智能客服 MVP｜产品作品集</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./styles.css" />
+    <script src="./access.js" defer></script>
   </head>
-  <body>
+  <body class="access-locked">
+    <section class="access-gate" aria-labelledby="access-title">
+      <div class="access-panel">
+        <p class="access-mark">AI PM PORTFOLIO</p>
+        <h1 id="access-title">访问作品集</h1>
+        <p class="access-description">这是一个受保护的 AI 产品经理项目，请输入访问密码后继续。</p>
+        <form class="access-form" novalidate>
+          <label for="access-password">访问密码</label>
+          <div class="access-field">
+            <input id="access-password" name="password" type="password" inputmode="numeric" autocomplete="off" required autofocus />
+            <button type="submit">进入作品集</button>
+          </div>
+          <p class="access-error" role="alert" aria-live="polite"></p>
+        </form>
+        <noscript><p class="access-noscript">请启用 JavaScript 后再访问此作品集。</p></noscript>
+      </div>
+    </section>
+
     <header class="site-header">
       <a class="wordmark" href="#top">AI PM PORTFOLIO</a>
       <a class="header-link" href="#deliverables">查看交付文件 ↓</a>
