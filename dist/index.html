@@ -6,8 +6,13 @@
     <meta name="description" content="AI 智能客服 MVP 产品作品集，包含用户研究、竞品分析、PRD、AI 能力设计、Evals、数据闭环与 Vibe Coding 实践。" />
     <title>AI 智能客服 MVP｜产品作品集</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="./styles.css" />
-    <script src="./access.js" defer></script>
+    <style>
+      body.access-locked > .site-header,
+      body.access-locked > main,
+      body.access-locked > footer { display: none !important; }
+    </style>
+    <link rel="stylesheet" href="./styles.css?v=20261012-2" />
+    <script src="./access.js?v=20261012-2" defer></script>
   </head>
   <body class="access-locked">
     <section class="access-gate" aria-labelledby="access-title">
@@ -27,12 +32,12 @@
       </div>
     </section>
 
-    <header class="site-header">
+    <header class="site-header" hidden>
       <a class="wordmark" href="#top">AI PM PORTFOLIO</a>
       <a class="header-link" href="#deliverables">查看交付文件 ↓</a>
     </header>
 
-    <main id="top">
+    <main id="top" hidden>
       <section class="intro">
         <p class="eyebrow">AI 产品经理完整项目</p>
         <h1>AI 智能客服 MVP</h1>
@@ -230,7 +235,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer hidden>
       <p>AI 智能客服 MVP · 产品作品集</p>
     </footer>
   </body>
